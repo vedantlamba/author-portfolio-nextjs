@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/ui/navbar";
 import { AuthorSection } from "../components/author-section";
+import { LeadCaptureSection } from "../components/lead-capture-section";
 
 export const HomeView = () => {
   return (
@@ -8,6 +9,7 @@ export const HomeView = () => {
       <Hero />
       <NewsletterBox />
       <AuthorSection />
+      <LeadCaptureSection />
     </div>
   );
 };
