@@ -4,7 +4,7 @@ export const AuthorSection = () => {
   return (
     <div className="border-y">
       <div className="max-w-6xl mx-auto grid grid-cols-2">
-        <div className="border-r flex flex-col gap-10 py-28 pr-5 pl-10 md:pl-0">
+        <div className="border-r flex flex-col gap-10 py-32 pr-5 pl-10 md:pl-0">
           <h2 className="text-4xl font-medium">Hi, I'm Vedant Lamba</h2>
           <div
             className={`${crimson.className} flex flex-col gap-10 text-xl tracking-wide leading-[1.5] text-balance`}
@@ -21,7 +21,7 @@ export const AuthorSection = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-10 py-28 pl-36">
+        <div className="flex flex-col gap-10 py-32 pl-36">
           <h3 className="text-2xl font-medium">
             Browse the latest newsletter:
           </h3>
