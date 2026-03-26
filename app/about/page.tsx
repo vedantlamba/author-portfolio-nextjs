@@ -22,10 +22,10 @@ export default AboutPage;
 const AboutHero = () => {
   return (
     <div className="grid grid-cols-2">
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col justify-center gap-12 pl-4">
         <h2 className="text-4xl font-medium">Hi, I'm Vedant Lamba.</h2>
         <div
-          className={`${crimson.className} text-xl max-w-lg text-balance space-y-6 leading-[1.5]`}
+          className={`${crimson.className} text-xl max-w-lg text-balance space-y-8 leading-[1.5]`}
         >
           <p>This is a placeholder section for your author introduction. </p>
           <p>
@@ -42,7 +42,15 @@ const AboutHero = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center">Something</div>
+      <div className="flex justify-end items-center">
+        <div className="w-full max-w-md aspect-square overflow-hidden rounded-lg border border-neutral-700 p-1">
+          <img
+            src="/author-3.jpeg"
+            alt="author"
+            className="w-full h-full object-cover rounded-sm"
+          />
+        </div>
+      </div>
     </div>
   );
 };

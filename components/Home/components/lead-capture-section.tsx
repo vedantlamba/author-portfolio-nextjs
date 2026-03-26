@@ -2,8 +2,8 @@ import { crimson } from "@/app/layout";
 
 export const LeadCaptureSection = () => {
   return (
-    <div className="mt-60 bg-neutral-900 text-white">
-      <div className="max-w-6xl mx-auto grid grid-cols-2">
+    <div className="lg:mt-60 bg-neutral-900 text-white">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col gap-10 py-28 pr-5 pl-10 md:pl-0 text-balance">
           <h2 className="text-3xl font-semibold text-neutral-100">
             Enter the World of{" "}
@@ -25,14 +25,14 @@ export const LeadCaptureSection = () => {
             your story, and your characters.
           </p>
         </div>
-        <div className="flex flex-col gap-10 py-28 pl-36">
+        <div className="flex flex-col justify-center items-center gap-10 p-5 lg:py-28 lg:pl-36">
           <div className="bg-linear-to-b from-neutral-800 to-neutral-900 h-full rounded-md flex flex-col text-balance text-center p-10 gap-10">
-            <h2 className="text-2xl font-medium flex-1">
+            <h2 className="text-lg lg:text-2xl font-medium flex-1">
               Get access to Chapter 1 or your exclusive content.
             </h2>
 
             <NewsletterBox />
-            <p className={`${crimson.className} text-neutral-300 flex-1`}>
+            <p className={`${crimson.className} text-neutral-300 flex-1 text-sm lg:text-base`}>
               You will get one short email every three days for a month. You can
               unsubscribe any time.
             </p>
