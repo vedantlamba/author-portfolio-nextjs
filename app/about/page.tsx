@@ -4,8 +4,8 @@ import { LeadCaptureSection } from "@/components/Home/components/lead-capture-se
 
 function AboutPage() {
   return (
-    <div className="flex flex-col gap-28">
-      <div className="flex flex-col bg-neutral-900 text-neutral-100 pt-24 pb-28">
+    <div className="flex flex-col gap-16 lg:gap-28">
+      <div className="flex flex-col bg-neutral-900 text-neutral-100 pt-24 pb-16 lg:pb-28">
         <div className="max-w-6xl mx-auto w-full">
           <AboutHero />
         </div>
@@ -21,11 +21,11 @@ export default AboutPage;
 
 const AboutHero = () => {
   return (
-    <div className="grid grid-cols-2">
-      <div className="flex flex-col justify-center gap-12 pl-4">
-        <h2 className="text-4xl font-medium">Hi, I'm Vedant Lamba.</h2>
+    <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="flex flex-col justify-center gap-8 lg:gap-12 pl-10 lg:pl-4 mb-10 lg:mb-0">
+        <h2 className="text-2xl lg:text-4xl font-medium">Hi, I'm Vedant Lamba.</h2>
         <div
-          className={`${crimson.className} text-xl max-w-lg text-balance space-y-8 leading-[1.5]`}
+          className={`${crimson.className} text-lg lg:text-xl max-w-xs lg:max-w-lg text-balance space-y-6 lg:space-y-8 leading-[1.5]`}
         >
           <p>This is a placeholder section for your author introduction. </p>
           <p>
@@ -42,8 +42,8 @@ const AboutHero = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-end items-center">
-        <div className="w-full max-w-md aspect-square overflow-hidden rounded-lg border border-neutral-700 p-1">
+      <div className="flex justify-end items-center p-10 lg:p-0">
+        <div className="w-full lg:max-w-md aspect-square overflow-hidden rounded-lg border border-neutral-700 p-1">
           <img
             src="/author-3.jpeg"
             alt="author"
@@ -57,10 +57,10 @@ const AboutHero = () => {
 
 const AboutDescription = () => {
   return (
-    <div className="max-w-6xl mx-auto w-full flex flex-col gap-28">
+    <div className="max-w-6xl mx-auto w-full flex flex-col gap-28 p-10 lg:p-0">
       <div className="space-y-6 max-w-2xl mx-auto w-full">
-        <h2 className="text-2xl font-medium">How My Work Will Draw You In</h2>
-        <div className={`space-y-6 text-[21px] ${crimson.className}`}>
+        <h2 className="text-xl lg:text-2xl font-medium">How My Work Will Draw You In</h2>
+        <div className={`space-y-6 text-lg lg:text-[21px] ${crimson.className}`}>
           <p>
             I write stories where myth and reality collide — where ancient
             powers linger beneath the surface of the modern world.
@@ -74,7 +74,7 @@ const AboutDescription = () => {
             and characters caught between destiny and destruction.
           </p>
           <p>My writing explores themes like:</p>
-          <ul className="space-y-2 list-disc pl-8 marker:text-sm marker:text-neutral-500">
+          <ul className="space-y-2 list-disc pl-8 marker:text-sm marker:text-neutral-500 text-balance">
             <li>Power that is inherited, not chosen</li>
             <li>Worlds hidden in plain sight</li>
             <li>The cost of awakening something ancient</li>
@@ -88,8 +88,8 @@ const AboutDescription = () => {
         </div>
       </div>
       <div className="space-y-6 max-w-2xl mx-auto w-full">
-        <h2 className="text-2xl font-medium">About Me</h2>
-        <div className={`${crimson.className} space-y-6 text-[21px]`}>
+        <h2 className="text-xl lg:text-2xl font-medium">About Me</h2>
+        <div className={`${crimson.className} space-y-6 text-lg lg:text-[21px] text-balance`}>
           <p className="font-semibold">
             Creator of The Bhairava Heir universe.
           </p>
@@ -125,20 +125,20 @@ const AboutDescription = () => {
 
 const OtherInterests = () => {
   return (
-    <div className="w-full border-t pt-28">
-      <div className="max-w-6xl mx-auto w-full flex flex-col gap-28">
-        <div className="space-y-6 max-w-2xl mx-auto w-full text-center">
-          <h2 className="text-2xl font-medium">Other Interests</h2>
-          <p className="text-lg">
+    <div className="w-full border-t pt-16 lg:pt-28">
+      <div className="max-w-6xl mx-auto w-full flex flex-col gap-8 lg:gap-28">
+        <div className="space-y-3 lg:space-y-6 max-w-2xl mx-auto w-full text-center">
+          <h2 className="text-xl lg:text-2xl font-medium">Other Interests</h2>
+          <p className="text-lg text-balance">
             Things that shape my thinking, creativity, and the worlds I build…
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-18">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-28 p-10">
           <div className="space-y-5">
             <h3 className="text-xl font-medium">
               Spiritual & Thoughtful Reading
             </h3>
-            <p className={`${crimson.className} leading-[1.7] text-xl`}>
+            <p className={`${crimson.className} leading-[1.7] text-lg lg:text-xl`}>
               I’m drawn to books that explore deeper truths — from spirituality
               to philosophy, as well as fiction and non-fiction that challenge
               how we see the world. These ideas often find their way into my
@@ -147,7 +147,7 @@ const OtherInterests = () => {
           </div>
           <div className="space-y-5">
             <h3 className="text-xl font-medium">Anime & Storytelling</h3>
-            <p className={`${crimson.className} leading-[1.7] text-xl`}>
+            <p className={`${crimson.className} leading-[1.7] text-lg lg:text-xl`}>
               Anime inspires my sense of scale, emotion, and character depth.
               I’m especially drawn to stories that blend power, sacrifice, and
               layered worlds — where every character carries meaning.
@@ -155,7 +155,7 @@ const OtherInterests = () => {
           </div>
           <div className="space-y-5">
             <h3 className="text-xl font-medium">Meditation & Sadhana</h3>
-            <p className={`${crimson.className} leading-[1.7] text-xl`}>
+            <p className={`${crimson.className} leading-[1.7] text-lg lg:text-xl`}>
               Stillness is just as important as creation. Through meditation and
               sadhana, I explore clarity, discipline, and inner awareness —
               which deeply influences both my writing and perspective.

@@ -2,7 +2,7 @@ import { crimson } from "@/app/layout";
 
 export const LeadCaptureSection = () => {
   return (
-    <div className="lg:mt-60 bg-neutral-900 text-white">
+    <div className="mt-28 lg:mt-60 bg-neutral-900 text-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col gap-10 py-28 pr-5 pl-10 md:pl-0 text-balance">
           <h2 className="text-3xl font-semibold text-neutral-100">
