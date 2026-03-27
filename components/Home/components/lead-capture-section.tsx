@@ -4,7 +4,7 @@ export const LeadCaptureSection = () => {
   return (
     <div className="bg-neutral-900 text-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 min-[1100px]:grid-cols-2">
-        <div className="flex flex-col gap-10 py-28 min-[760px]:max-[1262px]:pr-0 min-[1100px]:pr-10 pl-10 min-[760px]:max-[1262px]:pl-0 lg:pl-0 text-balance min-[760px]:max-[1262px]:items-center min-[760px]:max-[1262px]:text-center min-[760px]:max-[1262px]:max-w-lg min-[760px]:max-[1262px]:mx-auto">
+        <div className="flex flex-col gap-10 py-28 min-[760px]:max-[1262px]:pr-0 min-[1100px]:pr-10 pl-10 lg:pl-0 min-[760px]:max-[1262px]:pl-0 text-balance min-[760px]:max-[1262px]:items-center min-[760px]:max-[1262px]:text-center min-[760px]:max-[1262px]:max-w-lg min-[760px]:max-[1262px]:mx-auto">
           <h2 className="text-3xl font-semibold text-neutral-100">
             Enter the World of{" "}
             <span className="text-white">The Bhairava Heir</span>
