@@ -2,9 +2,9 @@ import { crimson } from "@/app/layout";
 
 export const LeadCaptureSection = () => {
   return (
-    <div className="mt-28 lg:mt-60 bg-neutral-900 text-white">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-        <div className="flex flex-col gap-10 py-28 pr-5 pl-10 md:pl-0 text-balance">
+    <div className="bg-neutral-900 text-white">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 min-[1100px]:grid-cols-2">
+        <div className="flex flex-col gap-10 py-28 min-[760px]:max-[1262px]:pr-0 min-[1100px]:pr-10 pl-10 min-[760px]:max-[1262px]:pl-0 lg:pl-0 text-balance min-[760px]:max-[1262px]:items-center min-[760px]:max-[1262px]:text-center min-[760px]:max-[1262px]:max-w-lg min-[760px]:max-[1262px]:mx-auto">
           <h2 className="text-3xl font-semibold text-neutral-100">
             Enter the World of{" "}
             <span className="text-white">The Bhairava Heir</span>
@@ -25,14 +25,16 @@ export const LeadCaptureSection = () => {
             your story, and your characters.
           </p>
         </div>
-        <div className="flex flex-col justify-center items-center gap-10 p-5 lg:py-28 lg:pl-36">
-          <div className="bg-linear-to-b from-neutral-800 to-neutral-900 h-full rounded-md flex flex-col text-balance text-center p-10 gap-10">
-            <h2 className="text-lg lg:text-2xl font-medium flex-1">
+        <div className="flex flex-col justify-center items-center gap-10 p-5 lg:py-28 min-[1100px]:pl-36">
+          <div className="bg-linear-to-b from-neutral-800 to-neutral-900 h-full rounded-md flex flex-col text-balance text-center p-10 gap-10 min-[560px]:max-[1262px]:w-100">
+            <h2 className="text-xl lg:text-2xl font-medium flex-1">
               Get access to Chapter 1 or your exclusive content.
             </h2>
 
             <NewsletterBox />
-            <p className={`${crimson.className} text-neutral-300 flex-1 text-sm lg:text-base`}>
+            <p
+              className={`${crimson.className} text-neutral-300 flex-1 text-sm lg:text-base`}
+            >
               You will get one short email every three days for a month. You can
               unsubscribe any time.
             </p>
@@ -45,7 +47,7 @@ export const LeadCaptureSection = () => {
 
 export const NewsletterBox = () => {
   return (
-    <div>
+    <div className="min-[760px]:max-[1262px]:flex min-[760px]:max-[1262px]:flex-col min-[760px]:max-[1262px]:items-center">
       <input
         type="email"
         placeholder="Email Address"

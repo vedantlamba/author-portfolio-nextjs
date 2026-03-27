@@ -17,7 +17,7 @@ export const Hero = () => {
   return (
     <div className="bg-neutral-900 text-neutral-100 pt-24 pb-36">
       <div className="max-w-6xl w-full mx-auto flex flex-col items-center text-center gap-24 lg:gap-32">
-        <p className="text-[18px] lg:text-[40px] text-center font-semibold leading-[1.4] tracking-tight max-w-xs lg:max-w-4xl text-balance">
+        <p className="text-[18px] min-[760px]:max-[1262px]:text-2xl lg:text-[40px] text-center font-semibold leading-[1.4] tracking-tight max-w-xs min-[760px]:max-[1262px]:max-w-2xl lg:max-w-4xl text-balance">
           They sealed us not because we were evil… <br />
           but because we were unstoppable.
         </p>
@@ -65,11 +65,11 @@ export const Book = () => {
 export const NewsletterBox = () => {
   return (
     <div className="max-w-6xl w-full mx-auto flex flex-col gap-8 items-center justify-center text-center mt-36 lg:mt-56 mb-28 lg:mb-60">
-      <p className="text-[16px] lg:text-2xl font-medium tracking-tight leading-[1.4]">
+      <p className="text-[16px] min-[760px]:max-[1262px]:text-xl lg:text-2xl font-medium tracking-tight leading-[1.4]">
         Download Chapter 1 of <span className="italic">The Bhairava Heir</span>{" "}
         , <br /> my #1 New York Times bestselling book.
       </p>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col lg:flex-row">
         <input
           type="email"
           placeholder="Email Address"
