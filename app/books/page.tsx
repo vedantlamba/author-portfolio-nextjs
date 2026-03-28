@@ -19,9 +19,11 @@ export default BooksPage;
 
 export const Introduction = () => {
   return (
-    <div className="w-full  flex flex-col gap-10 justify-center items-center text-center">
-      <h2 className="text-5xl font-medium">Books</h2>
-      <p className={`max-w-2xl text-balance text-xl ${crimson.className}`}>
+    <div className="w-full flex flex-col gap-6 justify-center items-center text-center p-10">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium">Books</h2>
+      <p
+        className={`min-[760px]:max-[1262px]:max-w-lg lg:max-w-2xl text-lg lg:text-xl ${crimson.className} leading-[1.5]`}
+      >
         You can think of this as the place where your world begins. In this
         template, the content you’re seeing is part of a fictional universe — a
         hidden world where divine bloodlines walk among humans, carrying
@@ -35,9 +37,9 @@ export const Introduction = () => {
 
 export const BookIntro = () => {
   return (
-    <div className="max-w-6xl mx-auto w-full grid grid-cols-2">
+    <div className="max-w-6xl mx-auto w-full grid grid-cols-1 min-[1100px]:grid-cols-2 gap-10 min-[1100px]:gap-0">
       <div className="flex justify-center items-center">
-        <div className="w-[280px] aspect-[2/3]">
+        <div className="w-[300px] aspect-[2/3]">
           <img
             src="/bhairava-heir-1.png"
             alt="book-cover"
@@ -46,9 +48,9 @@ export const BookIntro = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 text-xl leading-[1.7] max-w-md">
+      <div className="flex flex-col gap-4 text-xl leading-[1.7] max-w-md p-10 lg:p-0 mx-auto justify-center min-[760px]:max-[1262px]:items-center min-[760px]:max-[1262px]:text-center">
         <h2 className="text-3xl leading-[1.4] font-medium">
-          The Bhairava Heir: A Story of Sealed Bloodlines and Forbidden Power
+          The Bhairava Heir
         </h2>
 
         <p className="text-xl">A world that was never meant to awaken.</p>
