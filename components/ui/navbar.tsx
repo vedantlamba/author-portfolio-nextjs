@@ -93,7 +93,7 @@ export const MenuMobileButton = () => {
 
         <span>Menu</span>
       </button>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {open && (
           <motion.div
             initial={{ x: "100%" }}
@@ -125,7 +125,33 @@ export const MenuMobileButton = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <div
+        className={`
+    fixed top-[72px] left-0 w-full h-[calc(100vh-72px)]
+    bg-neutral-900 z-40 flex items-center justify-center text-white
+
+    transform transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+    will-change-transform
+
+    ${open ? "translate-x-0" : "translate-x-full"}
+  `}
+      >
+        <div className="h-full w-full flex flex-col gap-8 items-center mt-36 text-2xl">
+          {Links.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={() => setOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link href="/about" onClick={() => setOpen(false)}>
+            About
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
