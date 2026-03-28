@@ -4,8 +4,8 @@ import { Book } from "@/components/Home/View/home-view";
 
 function BooksPage() {
   return (
-    <div className="flex flex-col gap-40">
-      <div className="flex flex-col bg-neutral-900 text-neutral-100 pt-24 pb-28">
+    <div className="flex flex-col gap-20 lg:gap-28">
+      <div className="flex flex-col bg-neutral-900 text-neutral-100 lg:pt-24 pb-8 lg:pb-24">
         <div className="max-w-6xl mx-auto w-full">
           <Introduction />
         </div>

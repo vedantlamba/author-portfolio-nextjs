@@ -65,7 +65,7 @@ export const MenuMobileButton = () => {
         className="flex gap-2 items-center relative z-50"
         onClick={() => setOpen((state) => !state)}
       >
-        <div className="relative w-5 h-5">
+        <div className="relative w-8 h-8">
           <motion.div
             animate={{
               opacity: open ? 0 : 1,
