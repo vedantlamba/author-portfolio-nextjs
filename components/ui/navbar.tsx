@@ -9,7 +9,6 @@ const Links = [
   { name: "Books", href: "/books" },
   { name: "Articles", href: "/articles" },
   { name: "Newsletter", href: "/newsletter" },
-  { name: "App", href: "/app" },
   { name: "Speaking", href: "/speaking" },
 ];
 
