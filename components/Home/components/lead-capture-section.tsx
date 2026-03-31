@@ -45,7 +45,13 @@ export const LeadCaptureSection = () => {
   );
 };
 
-export const NewsletterBox = () => {
+interface NewsletterBoxProps {
+  text?: string;
+}
+
+export const NewsletterBox = ({
+  text = "Download The Free Chapter",
+}: NewsletterBoxProps) => {
   return (
     <div className="min-[760px]:max-[1262px]:flex min-[760px]:max-[1262px]:flex-col min-[760px]:max-[1262px]:items-center">
       <input
@@ -54,7 +60,7 @@ export const NewsletterBox = () => {
         className="flex-1 w-72 border px-4 py-4 outline-none border-neutral-800 placeholder:text-center"
       />
       <button className="flex-1 w-72 px-4 py-4 cursor-pointer bg-linear-to-b from-neutral-100 to-neutral-300 text-neutral-700 hover:text-black font-semibold text-lg">
-        Download The Free Chapter
+        {text}
       </button>
     </div>
   );
