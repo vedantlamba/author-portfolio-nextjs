@@ -5,7 +5,7 @@ import {
   ArrowRight02Icon,
   CheckmarkBadge01Icon,
 } from "@hugeicons/core-free-icons";
-import { articlesData } from "./mock-data";
+import { articlesData } from "../../components/Articles/Data/mock-data";
 import Link from "next/link";
 import { LeadCaptureSection } from "@/components/Home/components/lead-capture-section";
 

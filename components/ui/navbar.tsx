@@ -15,7 +15,7 @@ const Links = [
 export const Navbar = () => {
   return (
     <div className="bg-neutral-900 text-neutral-100">
-      <div className="max-w-6xl w-full mx-auto flex items-center py-9 px-8 min-[1100px]:px-0 text-[17px]">
+      <div className="max-w-6xl w-full mx-auto flex items-center py-9 px-8 min-[1100px]:px-1 text-[17px]">
         <div className="flex-1">
           <Link
             href="/"
