@@ -63,7 +63,7 @@ export const ArticleHero = () => {
         </div>
       </div>
       <div className="flex min-[760px]:max-[1262px]:justify-center min-[1100px]:justify-end items-center p-10 lg:p-0">
-        <div className="w-full min-[760px]:max-[1262px]:max-w-sm min-[1100px]:max-w-md aspect-square rounded-lg border border-neutral-800 p-1 flex flex-col justify-center">
+        <div className="w-full min-[760px]:max-[1262px]:max-w-md min-[1100px]:max-w-md aspect-square rounded-lg border border-neutral-800 p-1 flex flex-col justify-center">
           <div className="flex flex-col gap-8 justify-center p-8 rounded-lg">
             <h2 className="font-medium text-xl md:text-2xl">
               What You’ll Find Here
@@ -73,12 +73,12 @@ export const ArticleHero = () => {
                 return (
                   <p
                     key={index}
-                    className={`flex gap-2 text-balance text-sm md:text-lg font-light ${crimson.className}`}
+                    className={`flex items-center md:items-start gap-4  text-balance text-sm md:text-lg font-light ${crimson.className}`}
                   >
                     <span>
                       <HugeiconsIcon
                         icon={CheckmarkBadge01Icon}
-                        className="text-yellow-400"
+                        className="text-yellow-400 size-5 md:size-6 md:mt-1"
                       />
                     </span>
                     {item}
@@ -101,7 +101,7 @@ export const ArticlesByCategory = () => {
         <span className="text-lg md:text-xl">Browse articles by topic.</span>
       </div>
       <div className="w-full grid grid-cols-1 min-[1100px]:grid-cols-2 text-balance gap-28 p-10 min-[1100px]:p-0">
-        {articlesData.slice(0, 2).map((item, index) => {
+        {articlesData.map((item, index) => {
           return (
             <div key={index} className="flex flex-col">
               <h3 className="text-[22px] font-medium py-3">{item.category}</h3>
@@ -116,13 +116,13 @@ export const ArticlesByCategory = () => {
                     </li>
                   );
                 })}
-                <li className="py-4 text-[16px] font-medium border-t">
+                <li className="py-4 text-xs md:text-[16px] tracking-wide font-medium border-t uppercase">
                   <Link
                     href={item.category}
-                    className="flex items-center gap-4 truncate"
+                    className="flex items-center gap-2 md:gap-4"
                   >
                     Read More Articles On {item.category}
-                    <HugeiconsIcon icon={ArrowRight02Icon} className="size-5" />
+                    <HugeiconsIcon icon={ArrowRight02Icon} className="size-4 md:size-5" />
                   </Link>
                 </li>
               </ul>
