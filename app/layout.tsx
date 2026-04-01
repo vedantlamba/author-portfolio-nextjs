@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import {
   Jost,
   Figtree,
-  EB_Garamond,
-  Alegreya,
   Crimson_Text,
 } from "next/font/google";
 import "./globals.css";

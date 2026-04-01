@@ -1,4 +1,4 @@
-import { alegreya, crimson, eb_garamond } from "@/app/layout";
+import { crimson } from "@/app/layout";
 
 export const AuthorSection = () => {
   return (
