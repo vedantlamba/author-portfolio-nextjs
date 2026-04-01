@@ -1,6 +1,7 @@
 export const articlesData = [
   {
     category: "Creativity",
+    slug: "creativity",
     articles: [
       {
         title: "Creativity Isn’t Talent — It’s Controlled Chaos",
@@ -18,6 +19,7 @@ export const articlesData = [
   },
   {
     category: "Decision Making",
+    slug: "decision-making",
     articles: [
       {
         title: "The Power of Saying No (And Why It Changes Everything)",
@@ -35,6 +37,7 @@ export const articlesData = [
   },
   {
     category: "Focus",
+    slug: "focus",
     articles: [
       {
         title: "Focus Is a Weapon — Learn to Use It",
@@ -52,6 +55,7 @@ export const articlesData = [
   },
   {
     category: "Habits",
+    slug: "habits",
     articles: [
       {
         title: "Small Habits, Dangerous Outcomes",
@@ -69,6 +73,7 @@ export const articlesData = [
   },
   {
     category: "Life Lessons",
+    slug: "life-Lessons",
     articles: [
       {
         title: "Success Isn’t Fair — And That’s the Point",
@@ -86,6 +91,7 @@ export const articlesData = [
   },
   {
     category: "Motivation",
+    slug: "motivation",
     articles: [
       {
         title: "Motivation Is Overrated — Systems Win",
@@ -103,6 +109,7 @@ export const articlesData = [
   },
   {
     category: "Productivity",
+    slug: "productivity",
     articles: [
       {
         title: "Doing Less, But Better: The Real Productivity Shift",
@@ -119,7 +126,8 @@ export const articlesData = [
     ],
   },
   {
-    category: "Self-Improvement",
+    category: "Self Improvement",
+    slug: "self-Improvement",
     articles: [
       {
         title: "Becoming Dangerous: The Art of Self-Mastery",

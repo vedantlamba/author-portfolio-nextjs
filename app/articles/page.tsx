@@ -104,7 +104,7 @@ export const ArticlesByCategory = () => {
         {articlesData.map((item, index) => {
           return (
             <div key={index} className="flex flex-col">
-              <h3 className="text-[22px] font-medium py-3">{item.category}</h3>
+              <h3 className="text-[22px] font-medium py-3 capitalize">{item.category}</h3>
               <ul>
                 {item.articles.map((item, index) => {
                   return (
@@ -112,17 +112,20 @@ export const ArticlesByCategory = () => {
                       key={index}
                       className={`py-4 ${crimson.className} text-xl border-t`}
                     >
-                      <Link href={item.slug}>{item.title}</Link>
+                      <Link href={`/articles/${item.slug}`}>{item.title}</Link>
                     </li>
                   );
                 })}
                 <li className="py-4 text-xs md:text-[16px] tracking-wide font-medium border-t uppercase">
                   <Link
-                    href={item.category}
+                    href={`/articles/${item.slug}`}
                     className="flex items-center gap-2 md:gap-4"
                   >
                     Read More Articles On {item.category}
-                    <HugeiconsIcon icon={ArrowRight02Icon} className="size-4 md:size-5" />
+                    <HugeiconsIcon
+                      icon={ArrowRight02Icon}
+                      className="size-4 md:size-5"
+                    />
                   </Link>
                 </li>
               </ul>

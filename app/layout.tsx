@@ -17,15 +17,6 @@ const jost = Jost({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const eb_garamond = EB_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-export const alegreya = Alegreya({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
 
 export const crimson = Crimson_Text({
   subsets: ["latin"],

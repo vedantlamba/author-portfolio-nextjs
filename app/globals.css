@@ -131,3 +131,12 @@ body {
     @apply font-sans;
   }
 }
+
+
+.dropcap::first-letter {
+  font-size: 4rem;     /* size of the T */
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+}
