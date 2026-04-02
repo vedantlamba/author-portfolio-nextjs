@@ -35,22 +35,22 @@ async function Page({ params }: Props) {
 
   return (
     <div className="flex flex-col">
-      <div className="max-w-6xl mx-auto flex w-full">
-        <div className="flex-3 border-r flex flex-col gap-28">
-          <div className="flex flex-col gap-6 py-28">
-            <h2 className="text-5xl leading-[1.4] font-medium tracking-tight w-xl">
+      <div className="max-w-6xl mx-auto flex flex-col min-[1100px]:flex-row w-full">
+        <div className="flex-3 min-[1100px]:border-r flex flex-col min-[1100px]:gap-28 gap-8">
+          <div className="flex flex-col gap-6 py-8 lg:py-24 px-10 min-[1100px]:px-0">
+            <h2 className="text-3xl md:text-3xl lg:text-5xl leading-[1.4] font-medium tracking-tight min-[1100px]:w-xl">
               The Blood That Was Never Meant to Awaken
             </h2>
-            <div className="flex gap-2 text-sm text-neutral-600">
-              <span className={`${crimson.className}`}>written by</span>
+            <div className="flex flex-wrap gap-2 text-xs min-[1100px]:text-sm text-neutral-600 ">
+              <span className={`${crimson.className} text-sm`}>written by</span>
               <span className="font-medium uppercase">Vedant Lamba</span>
-              <span className="block w-[1px] my-1 bg-muted-foreground"></span>
+              <span className="hidden md:block w-[1px] my-1 bg-muted-foreground"></span>
               <span className="uppercase font-medium">
                 Dark Fantasy, Indian Mythology
               </span>
             </div>
           </div>
-          <div className={`space-y-6 text-xl ${crimson.className} w-xl`}>
+          <div className={`space-y-6 text-xl ${crimson.className} min-[1100px]:w-xl px-10 min-[1100px]:px-0`}>
             <p>There are stories we tell the world.</p>
 
             <p>
@@ -134,7 +134,7 @@ async function Page({ params }: Props) {
             <Footnotes />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between py-20">
+        <div className="flex-1 flex flex-col justify-between pt-0 lg:pt-20 pb-8 lg:pb-24">
           <div className="p-10 flex flex-col gap-5">
             <span className="uppercase tracking-wide text-sm font-medium text-neutral-500">
               About the Author

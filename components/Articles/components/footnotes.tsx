@@ -1,16 +1,17 @@
 "use client";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export const Footnotes = () => {
   const [open, setOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="flex flex-col items-start gap-6 pb-8 lg:pb-28">
+    <div className="flex flex-col items-start gap-6 lg:pb-28">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="cursor-pointer text-sm font-medium uppercase tracking-wider flex gap-1 items-center"
+        className="cursor-pointer text-sm font-medium uppercase tracking-wider flex gap-1 items-center px-10 min-[1100px]:px-0"
       >
         Footnotes
         <span
@@ -18,17 +19,23 @@ export const Footnotes = () => {
             open ? "rotate-0" : "-rotate-90"
           }`}
         >
-          <HugeiconsIcon icon={ArrowDown01Icon} size={20}  />
+          <HugeiconsIcon icon={ArrowDown01Icon} size={20} />
         </span>
       </button>
 
       <div
+        style={{
+          maxHeight: open
+            ? `${contentRef.current?.scrollHeight}px`
+            : "0px",
+        }}
         className={`overflow-hidden transition-all duration-400 ${
-          open ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
+          open ? "opacity-100 ease-in-out" : "opacity-0 ease-in-out"
         }`}
       >
         <div
-          className={` text-[16px] italic w-2xl p-5 flex flex-col gap-8 leading-[1.7]`}
+          ref={contentRef}
+          className={` text-[16px] italic min-[1100px]:w-2xl p-10 min-[1100px]:p-0 flex flex-col gap-8 leading-[1.7]`}
         >
           <p>
             1. This article shares a shortened version of Mikkinen's speech. I
