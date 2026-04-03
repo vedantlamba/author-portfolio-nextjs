@@ -144,3 +144,14 @@ export const articlesData = [
     ],
   },
 ];
+
+
+
+export const articlePoints = [
+  "Practical guides on focus & discipline",
+  "Deep insights on mindset & personal growth",
+  "Strategies to overcome procrastination",
+  "Lessons on consistency and long-term success",
+  "Thoughts on identity, power, and self-mastery",
+  "Story-driven ideas inspired by fiction & philosophy",
+];
