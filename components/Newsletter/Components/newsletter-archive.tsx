@@ -1,5 +1,5 @@
 import { crimson } from "@/app/layout";
-import { newsletterData } from "../newsletterdata";
+import { newsletterContent } from "@/lib/content/newsletter";
 
 export const NewsletterArchive = () => {
   return (
@@ -18,7 +18,7 @@ export const NewsletterArchive = () => {
 export const Newsletters = () => {
   return (
     <div className="flex flex-col mx-auto gap-16">
-      {newsletterData.map((item, index) => {
+      {newsletterContent.archive.map((item, index) => {
         return (
           <div
             key={index}

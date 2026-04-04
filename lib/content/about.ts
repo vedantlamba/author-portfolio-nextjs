@@ -21,7 +21,7 @@ export const aboutContent: AboutContent = {
   hero: {
     title: "Hi, I'm Vedant Lamba.",
     image: {
-      src: "/author-3.jpeg",
+      src: "/author-3.avif",
       alt: "Author portrait",
     },
   },

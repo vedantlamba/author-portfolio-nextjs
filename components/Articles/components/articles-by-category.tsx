@@ -1,8 +1,8 @@
 import { crimson } from "@/app/layout";
-import { articlesData } from "../Data/mock-data";
-import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { articlesContent } from "@/lib/content/articles";
 import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import Link from "next/link";
 
 export const ArticlesByCategory = () => {
   return (
@@ -12,20 +12,20 @@ export const ArticlesByCategory = () => {
         <span className="text-lg md:text-xl">Browse articles by topic.</span>
       </div>
       <div className="w-full grid grid-cols-1 min-[1100px]:grid-cols-2 text-balance gap-28 p-10 min-[1100px]:p-0">
-        {articlesData.map((item, index) => {
+        {articlesContent.categories.map((item, index) => {
           return (
             <div key={index} className="flex flex-col">
               <h3 className="text-[22px] font-medium py-3 capitalize">
-                {item.category}
+                {item.label}
               </h3>
               <ul>
-                {item.articles.map((item, index) => {
+                {item.articles.map((article, index) => {
                   return (
                     <li
                       key={index}
                       className={`py-4 ${crimson.className} text-xl border-t`}
                     >
-                      <Link href={`/articles/${item.slug}`}>{item.title}</Link>
+                      <Link href={`/articles/${article.slug}`}>{article.title}</Link>
                     </li>
                   );
                 })}
@@ -34,7 +34,7 @@ export const ArticlesByCategory = () => {
                     href={`/articles/${item.slug}`}
                     className="flex items-center gap-2 md:gap-4"
                   >
-                    Read More Articles On {item.category}
+                    Read More Articles On {item.label}
                     <HugeiconsIcon
                       icon={ArrowRight02Icon}
                       className="size-4 md:size-5"

@@ -1,8 +1,8 @@
-import { HugeiconsIcon } from "@hugeicons/react";
-import { articlePoints } from "../Data/mock-data";
-import { CheckmarkBadge01Icon } from "@hugeicons/core-free-icons";
 import { crimson } from "@/app/layout";
 import { PageHeroLayout } from "@/components/shared/page-hero-layout";
+import { articlesContent } from "@/lib/content/articles";
+import { CheckmarkBadge01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 
 export const ArticleHero = () => {
   return (
@@ -36,7 +36,7 @@ export const ArticleHeroCard = () => {
             What You’ll Find Here
           </h2>
           <div className="flex flex-col gap-4">
-            {articlePoints.map((item, index) => {
+            {articlesContent.hero.points.map((item, index) => {
               return (
                 <p
                   key={index}

@@ -36,7 +36,7 @@ export const booksContent: BooksContent = {
       description:
         "Use this section to describe your own book - its concept, its world, and what makes it unique. Replace this content with your own story and give readers a reason to step into your universe.",
       cover: {
-        src: "/bhairava-heir-1.png",
+        src: "/bhairava-heir-1.avif",
         alt: "The Bhairava Heir book cover",
       },
       cta: {

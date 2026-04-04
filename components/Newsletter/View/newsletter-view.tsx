@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  LeadCaptureSection,
-  NewsletterBox,
-} from "@/components/Home/components/lead-capture-section";
-import { newsletterData } from "@/components/Newsletter/newsletterdata";
-import { crimson } from "@/app/layout";
+import { LeadCaptureSection } from "@/components/Home/components/lead-capture-section";
 import { NewsletterHero } from "../Components/newsletter-hero";
 import { NewsletterArchive } from "../Components/newsletter-archive";
 

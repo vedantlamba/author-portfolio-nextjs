@@ -19,15 +19,15 @@ export const homeContent: HomeContent = {
   hero: {
     visual: {
       cover: {
-        src: "/bhairava-heir-1.png",
+        src: "/bhairava-heir-1.avif",
         alt: "The Bhairava Heir book cover",
       },
       leftPage: {
-        src: "/book-page-1.png",
+        src: "/book-page-1.avif",
         alt: "Preview page from The Bhairava Heir",
       },
       rightPage: {
-        src: "/book-page-2.png",
+        src: "/book-page-2.avif",
         alt: "Preview page from The Bhairava Heir",
       },
     },
