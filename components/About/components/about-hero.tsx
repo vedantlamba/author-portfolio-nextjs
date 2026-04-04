@@ -1,8 +1,9 @@
 import { PageHeroLayout } from "@/components/shared/page-hero-layout";
+import { aboutContent } from "@/lib/content/about";
 
 export const AboutHero = () => {
   return (
-    <PageHeroLayout title="Hi, I'm Vedant Lamba." aside={<AboutHeroImage />}>
+    <PageHeroLayout title={aboutContent.hero.title} aside={<AboutHeroImage />}>
       <p>This is a placeholder section for your author introduction. </p>
       <p>
         You can use this space to share who you are, what you write about, and
@@ -25,8 +26,8 @@ export const AboutHeroImage = () => {
     <div className="flex min-[760px]:max-[1262px]:justify-center min-[1100px]:justify-end items-center p-10 lg:p-0">
       <div className="w-full min-[760px]:max-[1262px]:max-w-sm min-[1100px]:max-w-md aspect-square overflow-hidden rounded-lg border border-neutral-700 p-1">
         <img
-          src="/author-3.jpeg"
-          alt="author"
+          src={aboutContent.hero.image.src}
+          alt={aboutContent.hero.image.alt}
           className="w-full h-full object-cover rounded-sm"
         />
       </div>

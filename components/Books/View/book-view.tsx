@@ -1,3 +1,4 @@
+import { booksContent } from "@/lib/content/books";
 import { Introduction } from "../components/book-introduction";
 import { BookShowcaseCard } from "../components/book-showcase-card";
 
@@ -9,7 +10,9 @@ function BooksView() {
           <Introduction />
         </div>
       </div>
-      <BookShowcaseCard />
+      {booksContent.items.map((book) => {
+        return <BookShowcaseCard key={book.slug} book={book} />;
+      })}
     </div>
   );
 }
