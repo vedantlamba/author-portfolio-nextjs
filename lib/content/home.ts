@@ -13,6 +13,9 @@ export interface HomeHeroContent {
 export interface HomeContent {
   seo?: SeoContent;
   hero: HomeHeroContent;
+  authorSection: {
+    title: string;
+  };
   newsletterBox: {
     buttonText: string;
   };
@@ -34,6 +37,9 @@ export const homeContent: HomeContent = {
         alt: "Preview page from The Bhairava Heir",
       },
     },
+  },
+  authorSection: {
+    title: "Hi, I'm Vedant Lamba",
   },
   newsletterBox: {
     buttonText: "Download The Free Chapter",

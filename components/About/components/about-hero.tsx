@@ -1,22 +1,11 @@
+import AboutHeroBody from "@/content/about/hero-body.mdx";
 import { PageHeroLayout } from "@/components/shared/page-hero-layout";
 import { aboutContent } from "@/lib/content/about";
 
 export const AboutHero = () => {
   return (
     <PageHeroLayout title={aboutContent.hero.title} aside={<AboutHeroImage />}>
-      <p>This is a placeholder section for your author introduction. </p>
-      <p>
-        You can use this space to share who you are, what you write about, and
-        the kind of worlds or ideas you explore. Whether you create fantasy,
-        thrillers, romance, or something entirely unique — this is where your
-        story begins.
-      </p>
-      <p>
-        Right now, you're seeing demo content inspired by a fictional universe —
-        a hidden world of divine bloodlines, forgotten powers, and stories
-        waiting to unfold. Replace this with your own journey, your voice, and
-        your work.
-      </p>
+      <AboutHeroBody />
     </PageHeroLayout>
   );
 };

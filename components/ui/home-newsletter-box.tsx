@@ -1,3 +1,4 @@
+import HomeNewsletterBoxCopy from "@/content/home/newsletter-box-copy.mdx";
 import { homeContent } from "@/lib/content/home";
 
 interface HomeNewsletterBoxProps {
@@ -9,10 +10,9 @@ export const HomeNewsletterBox = ({
 }: HomeNewsletterBoxProps) => {
   return (
     <div className="max-w-6xl w-full mx-auto flex flex-col gap-8 items-center justify-center text-center mt-36 lg:mt-56 mb-28 lg:mb-60">
-      <p className="text-[16px] min-[760px]:max-[1262px]:text-xl lg:text-2xl font-medium tracking-tight leading-[1.4]">
-        Download Chapter 1 of <span className="italic">The Bhairava Heir</span>{" "}
-        , <br /> my #1 New York Times bestselling book.
-      </p>
+      <div className="text-[16px] min-[760px]:max-[1262px]:text-xl lg:text-2xl font-medium tracking-tight leading-[1.4]">
+        <HomeNewsletterBoxCopy />
+      </div>
       <div className="flex flex-col lg:flex-row">
         <input
           type="email"

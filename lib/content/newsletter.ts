@@ -21,6 +21,11 @@ export interface NewsletterContent {
     title: string;
     intro: string[];
     ctaLabel?: string;
+    card: {
+      title: string;
+      buttonText: string;
+      subtext: string;
+    };
   };
   archive: NewsletterArchiveYear[];
 }
@@ -29,6 +34,11 @@ export const newsletterContent: NewsletterContent = {
   hero: {
     title: "",
     intro: [],
+    card: {
+      title: "Get thoughtful insights delivered straight to your inbox.",
+      buttonText: "Subscribe",
+      subtext: "No spam. Just meaningful ideas worth your time.",
+    },
   },
   archive: [
     {

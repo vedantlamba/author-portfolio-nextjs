@@ -1,4 +1,5 @@
 import { crimson } from "@/app/layout";
+import ArticleHeroBody from "@/content/articles/hero-body.mdx";
 import { PageHeroLayout } from "@/components/shared/page-hero-layout";
 import { articlesContent } from "@/lib/content/articles";
 import { CheckmarkBadge01Icon } from "@hugeicons/core-free-icons";
@@ -7,22 +8,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 export const ArticleHero = () => {
   return (
     <PageHeroLayout title="Articles" aside={<ArticleHeroCard />}>
-      <p>
-        This page is where I share ideas that sit at the intersection of
-        creativity, discipline, and self-mastery.{" "}
-      </p>
-      <p>
-        I write about things that shape who we become — how we think, how we
-        work, and how we build a life that actually feels meaningful. Some
-        articles are practical, some are philosophical, and some are simply
-        reflections born from quiet moments and sharp observations.
-      </p>
-      <p>
-        You’ll find pieces on focus, consistency, personal growth, and the
-        mindset required to build something that lasts. I also explore themes
-        inspired by storytelling — power, identity, solitude, and the quiet
-        battles people fight within.
-      </p>
+      <ArticleHeroBody />
     </PageHeroLayout>
   );
 };

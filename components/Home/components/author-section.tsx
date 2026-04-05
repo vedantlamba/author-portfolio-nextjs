@@ -1,4 +1,6 @@
 import { crimson } from "@/app/layout";
+import AuthorSectionBody from "@/content/home/author-section-body.mdx";
+import { homeContent } from "@/lib/content/home";
 import { newsletterContent } from "@/lib/content/newsletter";
 
 export const AuthorSection = () => {
@@ -11,21 +13,12 @@ export const AuthorSection = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 min-[1100px]:grid-cols-2">
         <div className="border-b min-[1100px]:border-b-0 min-[1100px]:border-r flex flex-col gap-10 py-28 min-[1100px]:py-32 pr-10 pl-10 min-[1100px]:pl-0 min-[760px]:max-[1262px]:items-center min-[760px]:max-[1262px]:text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium">
-            Hi, I'm Vedant Lamba
+            {homeContent.authorSection.title}
           </h2>
           <div
             className={`${crimson.className} flex flex-col gap-10 text-lg lg:text-xl tracking-wide leading-[1.5] text-balance min-[760px]:max-[1262px]:max-w-sm lg:max-w-lg`}
           >
-            <p>
-              This section is designed for your story. Use it to introduce
-              yourself as a writer — your ideas, your journey, and the worlds
-              you’re building.
-            </p>
-            <p>
-              Right now, you're seeing demo content. The book, text, and visuals
-              are placeholders to help you imagine what your own author page
-              could look like. Click here to learn more about me and my work.
-            </p>
+            <AuthorSectionBody />
           </div>
         </div>
         <div className="flex flex-col gap-10 py-28 min-[1100px]:py-32 pl-10 pr-10 min-[1200px]:pl-40 min-[1100px]:pr-0 min-[760px]:max-[1262px]:items-center min-[760px]:max-[1262px]:text-center">
