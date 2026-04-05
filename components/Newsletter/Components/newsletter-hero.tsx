@@ -1,5 +1,5 @@
 import { crimson } from "@/app/layout";
-import { NewsletterBox } from "@/components/Home/components/lead-capture-section";
+import { NewsletterBox } from "@/components/shared/lead-capture-section";
 import { PageHeroLayout } from "@/components/shared/page-hero-layout";
 
 export const NewsletterHero = () => {

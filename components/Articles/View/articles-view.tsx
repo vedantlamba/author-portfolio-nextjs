@@ -1,6 +1,6 @@
+import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
 import { ArticleHero } from "../components/article-page-hero";
 import { ArticlesByCategory } from "../components/articles-by-category";
-import { LeadCaptureSection } from "@/components/Home/components/lead-capture-section";
 
 function ArticlesView() {
   return (

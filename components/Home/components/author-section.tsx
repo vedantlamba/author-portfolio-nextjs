@@ -1,6 +1,11 @@
 import { crimson } from "@/app/layout";
+import { newsletterContent } from "@/lib/content/newsletter";
 
 export const AuthorSection = () => {
+  const latestIssues = newsletterContent.archive
+    .flatMap((year) => year.issues)
+    .slice(3, 6);
+
   return (
     <div className="border-y">
       <div className="max-w-6xl mx-auto grid grid-cols-1 min-[1100px]:grid-cols-2">
@@ -30,18 +35,14 @@ export const AuthorSection = () => {
           <div
             className={`flex flex-col gap-8 text-lg lg:text-xl leading-[1.5] text-balance ${crimson.className} min-[760px]:max-[1262px]:max-w-sm lg:max-w-lg`}
           >
-            <p>
-              3-2-1: This is a demo newsletter title — you can replace this with
-              your own article or newsletter link
-            </p>
-            <p>
-              3-2-1: Add your own writing here, whether it’s blog posts, weekly
-              newsletters, or insights
-            </p>
-            <p>
-              3-2-1: Use this section to showcase your content and keep your
-              readers engaged
-            </p>
+            {latestIssues.map((issue) => {
+              return (
+                <p key={issue.slug}>
+                  <span className="font-bold">{issue.date}</span> -{" "}
+                  {issue.title}
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>

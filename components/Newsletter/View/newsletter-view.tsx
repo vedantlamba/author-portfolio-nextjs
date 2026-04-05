@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LeadCaptureSection } from "@/components/Home/components/lead-capture-section";
+import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
 import { NewsletterHero } from "../Components/newsletter-hero";
 import { NewsletterArchive } from "../Components/newsletter-archive";
 

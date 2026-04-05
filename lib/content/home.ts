@@ -13,6 +13,9 @@ export interface HomeHeroContent {
 export interface HomeContent {
   seo?: SeoContent;
   hero: HomeHeroContent;
+  newsletterBox: {
+    buttonText: string;
+  };
 }
 
 export const homeContent: HomeContent = {
@@ -31,5 +34,8 @@ export const homeContent: HomeContent = {
         alt: "Preview page from The Bhairava Heir",
       },
     },
+  },
+  newsletterBox: {
+    buttonText: "Download The Free Chapter",
   },
 };

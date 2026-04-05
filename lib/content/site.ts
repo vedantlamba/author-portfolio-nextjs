@@ -23,6 +23,13 @@ export interface SiteContent {
     secondaryLinks: NavItem[];
   };
   socialLinks: SocialLink[];
+  shared: {
+    leadCapture: {
+      heading: string;
+      subheading: string;
+      buttonText: string;
+    };
+  };
 }
 
 export const siteContent: SiteContent = {
@@ -57,4 +64,12 @@ export const siteContent: SiteContent = {
       href: "https://youtube.com",
     },
   ],
+  shared: {
+    leadCapture: {
+      heading: "Get access to Chapter 1 or your exclusive content.",
+      subheading:
+        "You will get one short email every three days for a month. You can unsubscribe any time.",
+      buttonText: "Download The Free Chapter",
+    },
+  },
 };

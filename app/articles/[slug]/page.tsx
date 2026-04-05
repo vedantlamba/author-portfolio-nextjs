@@ -1,6 +1,6 @@
 import { crimson } from "@/app/layout";
 import { Footnotes } from "@/components/Articles/components/footnotes";
-import { LeadCaptureSection } from "@/components/Home/components/lead-capture-section";
+import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
 import {
   ArrowRight03Icon,
   InstagramIcon,

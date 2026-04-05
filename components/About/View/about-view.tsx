@@ -1,4 +1,4 @@
-import { LeadCaptureSection } from "@/components/Home/components/lead-capture-section";
+import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
 import { AboutHero } from "../components/about-hero";
 import { AboutDescription } from "../components/about-description";
 import { OtherInterests } from "../components/about-other-interests";
