@@ -1,13 +1,13 @@
-import { AuthorSection } from "../components/author-section";
-import { LeadCaptureSection } from "../components/lead-capture-section";
 import { Hero } from "../components/hero";
-import { NewsletterBox } from "@/components/ui/newsletter-box";
+import { AuthorSection } from "../components/author-section";
+import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
+import { HomeNewsletterBox } from "@/components/ui/home-newsletter-box";
 
 export const HomeView = () => {
   return (
     <div className="flex flex-col">
       <Hero />
-      <NewsletterBox />
+      <HomeNewsletterBox />
       <AuthorSection />
       <LeadCaptureSection />
     </div>

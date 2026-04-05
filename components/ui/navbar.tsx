@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Cancel01Icon, Menu03Icon } from "@hugeicons/core-free-icons";
+import { siteContent } from "@/lib/content/site";
 
-const Links = [
-  { name: "Books", href: "/books" },
-  { name: "Articles", href: "/articles" },
-  { name: "Newsletter", href: "/newsletter" },
-];
+const Links = siteContent.navbar.primaryLinks.map((item) => ({
+  name: item.label,
+  href: item.href,
+}));
 
 export const Navbar = () => {
   return (
@@ -20,7 +20,7 @@ export const Navbar = () => {
             href="/"
             className="text-sm md:text-base font-medium tracking-widest uppercase"
           >
-            Vedant Lamba
+            {siteContent.navbar.brandLabel}
           </Link>
         </div>
 
@@ -33,7 +33,9 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden lg:block flex-1 text-right font-medium">
-          <Link href="/about">About</Link>
+          <Link href={siteContent.navbar.secondaryLinks[0].href}>
+            {siteContent.navbar.secondaryLinks[0].label}
+          </Link>
         </div>
 
         <MenuMobileButton />
@@ -145,8 +147,11 @@ export const MenuMobileButton = () => {
               {item.name}
             </Link>
           ))}
-          <Link href="/about" onClick={() => setOpen(false)}>
-            About
+          <Link
+            href={siteContent.navbar.secondaryLinks[0].href}
+            onClick={() => setOpen(false)}
+          >
+            {siteContent.navbar.secondaryLinks[0].label}
           </Link>
         </div>
       </div>

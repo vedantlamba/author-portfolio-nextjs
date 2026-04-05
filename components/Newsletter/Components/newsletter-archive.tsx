@@ -1,13 +1,13 @@
 import { crimson } from "@/app/layout";
-import { newsletterData } from "../newsletterdata";
+import { newsletterContent } from "@/lib/content/newsletter";
 
 export const NewsletterArchive = () => {
   return (
     <div className="max-w-6xl mx-auto w-full flex flex-col gap-12 min-[1100px]:gap-28">
       <div className="flex flex-col gap-6 md:gap-12 justify-center items-center">
-        <h2 className="text-2xl md:text-4xl font-medium">All Newsletters</h2>
+        <h2 className="text-2xl md:text-4xl font-medium">{newsletterContent.archiveContent.title}</h2>
         <span className={`${crimson.className} text-[16px] md:text-xl`}>
-          A collection of thoughts from previous weeks
+          {newsletterContent.archiveContent.description}
         </span>
       </div>
       <Newsletters />
@@ -18,7 +18,7 @@ export const NewsletterArchive = () => {
 export const Newsletters = () => {
   return (
     <div className="flex flex-col mx-auto gap-16">
-      {newsletterData.map((item, index) => {
+      {newsletterContent.archive.map((item, index) => {
         return (
           <div
             key={index}

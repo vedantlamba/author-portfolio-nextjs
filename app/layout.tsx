@@ -10,7 +10,7 @@ import { Navbar } from "@/components/ui/navbar";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
 
-const jost = Jost({
+export const jost = Jost({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
