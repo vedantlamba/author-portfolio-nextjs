@@ -7,7 +7,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 
 export const ArticleHero = () => {
   return (
-    <PageHeroLayout title="Articles" aside={<ArticleHeroCard />}>
+    <PageHeroLayout title={articlesContent.hero.title} aside={<ArticleHeroCard />}>
       <ArticleHeroBody />
     </PageHeroLayout>
   );
@@ -19,7 +19,7 @@ export const ArticleHeroCard = () => {
       <div className="w-full min-[760px]:max-[1262px]:max-w-md min-[1100px]:max-w-md aspect-square rounded-lg border border-neutral-800 p-1 flex flex-col justify-center">
         <div className="flex flex-col gap-8 justify-center p-8 rounded-lg">
           <h2 className="font-medium text-xl md:text-2xl">
-            What You’ll Find Here
+            {articlesContent.hero.cardTitle}
           </h2>
           <div className="flex flex-col gap-4">
             {articlesContent.hero.points.map((item, index) => {

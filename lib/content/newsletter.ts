@@ -27,6 +27,10 @@ export interface NewsletterContent {
       subtext: string;
     };
   };
+  archiveContent: {
+    title: string;
+    description: string;
+  };
   archive: NewsletterArchiveYear[];
 }
 
@@ -39,6 +43,10 @@ export const newsletterContent: NewsletterContent = {
       buttonText: "Subscribe",
       subtext: "No spam. Just meaningful ideas worth your time.",
     },
+  },
+  archiveContent: {
+    title: "All Newsletters",
+    description: "A collection of thoughts from previous weeks",
   },
   archive: [
     {

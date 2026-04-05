@@ -33,8 +33,14 @@ export interface ArticlesContent {
   seo?: SeoContent;
   hero: {
     title: string;
+    cardTitle: string;
     intro: string[];
     points: string[];
+  };
+  listing: {
+    title: string;
+    description: string;
+    readMoreLabel: string;
   };
   categories: ArticleCategory[];
   details: ArticleDetail[];
@@ -42,7 +48,8 @@ export interface ArticlesContent {
 
 export const articlesContent: ArticlesContent = {
   hero: {
-    title: "",
+    title: "Articles",
+    cardTitle: "What You'll Find Here",
     intro: [],
     points: [
       "Practical guides on focus & discipline",
@@ -52,6 +59,11 @@ export const articlesContent: ArticlesContent = {
       "Thoughts on identity, power, and self-mastery",
       "Story-driven ideas inspired by fiction & philosophy",
     ],
+  },
+  listing: {
+    title: "All Articles",
+    description: "Browse articles by topic.",
+    readMoreLabel: "Read More Articles On",
   },
   categories: [
     {

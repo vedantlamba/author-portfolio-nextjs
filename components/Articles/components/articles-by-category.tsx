@@ -8,8 +8,8 @@ export const ArticlesByCategory = () => {
   return (
     <div className="max-w-6xl mx-auto w-full flex flex-col gap-12 min-[1100px]:gap-28">
       <div className="flex flex-col gap-6 md:gap-12 justify-center items-center">
-        <h2 className="text-2xl md:text-4xl font-medium">All Articles</h2>
-        <span className="text-lg md:text-xl">Browse articles by topic.</span>
+        <h2 className="text-2xl md:text-4xl font-medium">{articlesContent.listing.title}</h2>
+        <span className="text-lg md:text-xl">{articlesContent.listing.description}</span>
       </div>
       <div className="w-full grid grid-cols-1 min-[1100px]:grid-cols-2 text-balance gap-28 p-10 min-[1100px]:p-0">
         {articlesContent.categories.map((item, index) => {
@@ -34,7 +34,7 @@ export const ArticlesByCategory = () => {
                     href={`/articles/${item.slug}`}
                     className="flex items-center gap-2 md:gap-4"
                   >
-                    Read More Articles On {item.label}
+                    {articlesContent.listing.readMoreLabel} {item.label}
                     <HugeiconsIcon
                       icon={ArrowRight02Icon}
                       className="size-4 md:size-5"
