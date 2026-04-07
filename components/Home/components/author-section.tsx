@@ -2,11 +2,12 @@ import { crimson } from "@/app/layout";
 import AuthorSectionBody from "@/content/home/author-section-body.mdx";
 import { homeContent } from "@/lib/content/home";
 import { newsletterContent } from "@/lib/content/newsletter";
+import Link from "next/link";
 
 export const AuthorSection = () => {
   const latestIssues = newsletterContent.archive
     .flatMap((year) => year.issues)
-    .slice(3, 6);
+    .slice(0, 3);
 
   return (
     <div className="border-y">
@@ -30,10 +31,10 @@ export const AuthorSection = () => {
           >
             {latestIssues.map((issue) => {
               return (
-                <p key={issue.slug}>
+                <Link key={issue.slug} href={issue.slug}>
                   <span className="font-bold">{issue.date}</span> -{" "}
                   {issue.title}
-                </p>
+                </Link>
               );
             })}
           </div>
@@ -41,4 +42,4 @@ export const AuthorSection = () => {
       </div>
     </div>
   );
-};
+};  

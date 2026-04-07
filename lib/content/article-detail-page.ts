@@ -1,3 +1,8 @@
+import {
+  InstagramIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "@hugeicons/core-free-icons";
 import { siteContent } from "./site";
 
 export const articleDetailPageContent = {
@@ -6,8 +11,24 @@ export const articleDetailPageContent = {
   authorDescription:
     "writes about habits, decision-making, and continuous self-improvement. He shares ideas that help individuals build discipline, think clearly, and grow consistently in both life and work.",
   followLabel: "Follow Me On:",
-  socialLinks: siteContent.socialLinks.map((item) => ({
-    platform: item.platform,
-    href: item.href,
-  })),
+  socialLinks: [
+    {
+      href:
+        siteContent.socialLinks.find((item) => item.platform === "twitter")
+          ?.href ?? "#",
+      icon: TwitterIcon,
+    },
+    {
+      href:
+        siteContent.socialLinks.find((item) => item.platform === "instagram")
+          ?.href ?? "#",
+      icon: InstagramIcon,
+    },
+    {
+      href:
+        siteContent.socialLinks.find((item) => item.platform === "youtube")
+          ?.href ?? "#",
+      icon: YoutubeIcon,
+    },
+  ],
 } as const;

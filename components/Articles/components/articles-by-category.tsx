@@ -1,7 +1,7 @@
 import { crimson } from "@/app/layout";
 import { articlesContent } from "@/lib/content/articles";
-import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+// import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
+// import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 
 export const ArticlesByCategory = () => {
@@ -29,7 +29,7 @@ export const ArticlesByCategory = () => {
                     </li>
                   );
                 })}
-                <li className="py-4 text-xs md:text-[16px] tracking-wide font-medium border-t uppercase">
+                {/* <li className="py-4 text-xs md:text-[16px] tracking-wide font-medium border-t uppercase">
                   <Link
                     href={`/articles/${item.slug}`}
                     className="flex items-center gap-2 md:gap-4"
@@ -40,7 +40,7 @@ export const ArticlesByCategory = () => {
                       className="size-4 md:size-5"
                     />
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           );
