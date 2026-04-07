@@ -1,6 +1,6 @@
 import { crimson } from "@/app/layout";
 import NewsletterHeroBody from "@/content/newsletter/hero-body.mdx";
-import { NewsletterBox } from "@/components/shared/lead-capture-section";
+import { NewsletterSignupBox } from "@/components/shared/newsletter-signup-box";
 import { PageHeroLayout } from "@/components/shared/page-hero-layout";
 import { newsletterContent } from "@/lib/content/newsletter";
 
@@ -20,7 +20,7 @@ export const NewsletterHeroCard = () => {
           {newsletterContent.hero.card.title}
         </h2>
 
-        <NewsletterBox text={newsletterContent.hero.card.buttonText} />
+        <NewsletterSignupBox text={newsletterContent.hero.card.buttonText} />
         <p
           className={`${crimson.className} text-neutral-300 flex-1 text-sm lg:text-base`}
         >
