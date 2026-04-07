@@ -7,6 +7,7 @@ import {
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/ui/navbar";
+import { AppToaster } from "@/components/shared/app-toaster";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -14,7 +15,6 @@ export const jost = Jost({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
 
 export const crimson = Crimson_Text({
   subsets: ["latin"],
@@ -45,6 +45,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <AppToaster />
       </body>
     </html>
   );

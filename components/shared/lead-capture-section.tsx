@@ -1,5 +1,6 @@
 import { crimson } from "@/app/layout";
 import LeadCaptureBody from "@/content/shared/lead-capture-body.mdx";
+import { NewsletterSignupBox } from "@/components/shared/newsletter-signup-box";
 import { siteContent } from "@/lib/content/site";
 import type { MDXComponents } from "mdx/types";
 
@@ -31,7 +32,7 @@ export const LeadCaptureSection = ({
           <div className="bg-linear-to-b from-neutral-800 to-neutral-900 h-full rounded-md flex flex-col text-balance text-center p-10 gap-10 min-[560px]:max-[1262px]:w-100">
             <h2 className="text-xl lg:text-2xl font-medium flex-1">{heading}</h2>
 
-            <NewsletterBox text={buttonText} />
+            <NewsletterSignupBox text={buttonText} />
             <p
               className={`${crimson.className} text-neutral-300 flex-1 text-sm lg:text-base`}
             >
@@ -40,27 +41,6 @@ export const LeadCaptureSection = ({
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-interface NewsletterBoxProps {
-  text?: string;
-}
-
-export const NewsletterBox = ({
-  text = siteContent.shared.leadCapture.buttonText,
-}: NewsletterBoxProps) => {
-  return (
-    <div className="min-[760px]:max-[1262px]:flex min-[760px]:max-[1262px]:flex-col min-[760px]:max-[1262px]:items-center">
-      <input
-        type="email"
-        placeholder="Email Address"
-        className="flex-1 w-72 border px-4 py-4 outline-none border-neutral-800 placeholder:text-center"
-      />
-      <button className="flex-1 w-72 px-4 py-4 cursor-pointer bg-linear-to-b from-neutral-100 to-neutral-300 text-neutral-700 hover:text-black font-semibold text-lg">
-        {text}
-      </button>
     </div>
   );
 };
