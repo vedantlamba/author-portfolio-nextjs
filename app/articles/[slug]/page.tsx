@@ -41,12 +41,13 @@ async function Page({ params }: Props) {
       title={article.title}
       subheading={article.subheading}
       meta={
-        <div className="flex flex-wrap gap-2 text-xs text-neutral-600 min-[1100px]:text-sm">
+        <div className="flex flex-wrap gap-2 text-xs text-neutral-600 min-[1100px]:text-sm items-center">
           <span className={`${crimson.className} text-sm`}>written by</span>
           <span className="font-medium uppercase">{article.author}</span>
+          <span className="hidden h-3 w-px bg-black md:block" />
           {article.tags.length > 0 ? (
             <>
-              <span className="my-1 hidden w-[1px] bg-muted-foreground md:block"></span>
+              
               <span className="font-medium uppercase">
                 {article.tags.join(", ")}
               </span>
@@ -64,7 +65,9 @@ async function Page({ params }: Props) {
             </span>
             <span className="block h-[0.1px] w-full bg-neutral-200"></span>
             <p className={`text-lg ${crimson.className}`}>
-              <span className="font-bold">{articleDetailPageContent.authorName}</span>{" "}
+              <span className="font-bold">
+                {articleDetailPageContent.authorName}
+              </span>{" "}
               {articleDetailPageContent.authorDescription}
             </p>
             <span className="block h-[0.1px] w-full bg-neutral-200"></span>
