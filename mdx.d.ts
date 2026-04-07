@@ -7,5 +7,13 @@ declare module "*.mdx" {
   }
 
   const MDXComponent: ComponentType<MDXProps>;
+
+  export const title: string;
+  export const subheading: string | undefined;
+  export const author: string;
+  export const category: string;
+  export const tags: string[];
+  export const footnotes: string[] | undefined;
+
   export default MDXComponent;
 }
