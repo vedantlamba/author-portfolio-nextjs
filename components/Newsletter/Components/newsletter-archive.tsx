@@ -5,7 +5,7 @@ import Link from "next/link";
 export const NewsletterArchive = () => {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 min-[1100px]:gap-28">
-      <div className="flex flex-col items-center justify-center gap-6 md:gap-12">
+      <div className="flex flex-col items-center justify-center gap-3 md:gap-6 mt-10 min-[1100px]:mt-0">
         <h2 className="text-2xl font-medium md:text-4xl">
           {newsletterContent.archiveContent.title}
         </h2>
@@ -27,7 +27,9 @@ export const Newsletters = () => {
             key={index}
             className="flex flex-col gap-6 p-10 min-[1100px]:flex-row min-[1100px]:gap-16 min-[1100px]:p-0"
           >
-            <span className="text-lg font-medium tracking-wide">{item.year}</span>
+            <span className="text-lg font-medium tracking-wide">
+              {item.year}
+            </span>
             <div className="flex-1 min-[1100px]:space-y-3">
               {item.issues.map((issue, issueIndex) => {
                 return (
@@ -39,8 +41,11 @@ export const Newsletters = () => {
                       {issue.date}
                     </span>
 
-                    <Link href={issue.slug} className="flex-1 text-lg font-medium">
-                      {issue.title}
+                    <Link
+                      href={issue.slug}
+                      className="flex-1 text-lg font-medium text-neutral-800 hover:text-neutral-950 duration-200"
+                    >
+                      <span className="text-fill-hover">{issue.title}</span>
                     </Link>
                   </div>
                 );

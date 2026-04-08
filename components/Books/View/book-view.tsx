@@ -10,9 +10,11 @@ function BooksView() {
           <Introduction />
         </div>
       </div>
-      {booksContent.items.map((book) => {
-        return <BookShowcaseCard key={book.slug} book={book} />;
-      })}
+      <div className="mb-12 md:mb-28">
+        {booksContent.items.map((book) => {
+          return <BookShowcaseCard key={book.slug} book={book} />;
+        })}
+      </div>
     </div>
   );
 }

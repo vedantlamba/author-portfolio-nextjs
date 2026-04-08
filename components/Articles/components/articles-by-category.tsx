@@ -7,9 +7,13 @@ import Link from "next/link";
 export const ArticlesByCategory = () => {
   return (
     <div className="max-w-6xl mx-auto w-full flex flex-col gap-12 min-[1100px]:gap-28">
-      <div className="flex flex-col gap-6 md:gap-12 justify-center items-center">
-        <h2 className="text-2xl md:text-4xl font-medium">{articlesContent.listing.title}</h2>
-        <span className="text-lg md:text-xl">{articlesContent.listing.description}</span>
+      <div className="flex flex-col gap-3 md:gap-6 justify-center items-center mt-10 min-[1100px]:mt-0">
+        <h2 className="text-2xl md:text-4xl font-medium">
+          {articlesContent.listing.title}
+        </h2>
+        <span className="text-lg md:text-xl">
+          {articlesContent.listing.description}
+        </span>
       </div>
       <div className="w-full grid grid-cols-1 min-[1100px]:grid-cols-2 text-balance gap-28 p-10 min-[1100px]:p-0">
         {articlesContent.categories.map((item, index) => {
@@ -25,7 +29,12 @@ export const ArticlesByCategory = () => {
                       key={index}
                       className={`py-4 ${crimson.className} text-xl border-t`}
                     >
-                      <Link href={`/articles/${article.slug}`}>{article.title}</Link>
+                      <Link
+                        className="text-neutral-600 hover:text-neutral-950 duration-200"
+                        href={`/articles/${article.slug}`}
+                      >
+                        <span className="text-fill-hover">{article.title}</span>
+                      </Link>
                     </li>
                   );
                 })}

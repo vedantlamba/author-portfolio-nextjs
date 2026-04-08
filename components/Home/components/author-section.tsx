@@ -32,8 +32,10 @@ export const AuthorSection = () => {
             {latestIssues.map((issue) => {
               return (
                 <Link key={issue.slug} href={issue.slug}>
-                  <span className="font-bold">{issue.date}</span> -{" "}
-                  {issue.title}
+                  <span className="text-fill-hover">
+                    <span className="font-bold">{issue.date}</span> -{" "}
+                    {issue.title}
+                  </span>
                 </Link>
               );
             })}
@@ -42,4 +44,4 @@ export const AuthorSection = () => {
       </div>
     </div>
   );
-};  
+};
