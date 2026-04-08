@@ -1,4 +1,4 @@
-# How to Build an Author Website for Free, Even If You've Never Touched Code
+# Author Website Template for Writers and Book Authors
 
 ![Author Template Preview](./public/template-mockup.png)
 
