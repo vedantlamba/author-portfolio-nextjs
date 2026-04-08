@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { crimson } from "@/app/layout";
 import { NewsletterDetailLayout } from "@/components/Newsletter/Components/newsletter-detail-layout";
 import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
@@ -20,6 +21,34 @@ export async function generateStaticParams() {
   const slugs = await getNewsletterSlugs();
 
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const newsletter = await getNewsletterBySlug(slug);
+
+  if (!newsletter) {
+    return {};
+  }
+
+  const description = `Read ${newsletter.title}, a newsletter issue from the Book Author Template demo.`;
+
+  return {
+    title: newsletter.title,
+    description,
+    openGraph: {
+      title: newsletter.title,
+      description,
+      images: ["/icon.jpeg"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: newsletter.title,
+      description,
+      images: ["/icon.jpeg"],
+    },
+  };
 }
 
 export const dynamicParams = false;

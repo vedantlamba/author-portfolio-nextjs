@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { crimson } from "@/app/layout";
 import { Footnotes } from "@/components/Articles/components/footnotes";
 import { LeadCaptureSection } from "@/components/shared/lead-capture-section";
@@ -21,6 +22,36 @@ export async function generateStaticParams() {
   const slugs = await getArticleSlugs();
 
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
+
+  if (!article) {
+    return {};
+  }
+
+  const description =
+    article.subheading ??
+    `Read ${article.title} from the Book Author Template demo collection.`;
+
+  return {
+    title: article.title,
+    description,
+    openGraph: {
+      title: article.title,
+      description,
+      images: ["/icon.jpeg"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description,
+      images: ["/icon.jpeg"],
+    },
+  };
 }
 
 export const dynamicParams = false;
@@ -47,7 +78,6 @@ async function Page({ params }: Props) {
           <span className="hidden h-3 w-px bg-black md:block" />
           {article.tags.length > 0 ? (
             <>
-              
               <span className="font-medium uppercase">
                 {article.tags.join(", ")}
               </span>
